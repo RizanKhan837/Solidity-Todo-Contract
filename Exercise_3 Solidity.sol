@@ -3,11 +3,6 @@
 pragma solidity ^0.8.7;
 
 contract Task_3{
-
-    function find(uint _a) public pure returns(uint){
-        require(_a > 0 , "num must be greater");
-        return _a %3;
-    }
     
     function digitSum(uint num) public pure returns(uint){
         uint sum = 0;
@@ -21,7 +16,7 @@ contract Task_3{
 
     function nthTerm(uint _n, uint a, uint b, uint c) public pure returns(uint){
         // (1, 2, 3 , ... n)
-        // n = ()
+        // n = ?
         uint[] memory nth  = new uint[](_n);
         nth[0] = a;
         nth[1] = b;
@@ -34,5 +29,4 @@ contract Task_3{
         }
         return nth[i -1];
     }
-
 }
