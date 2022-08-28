@@ -25,9 +25,9 @@ contract Exercise_2{
         return result;
     }
 
-    function find(uint256 a) public pure returns(uint256){
-        uint remainder = a % 3;
-        return remainder;
+    function find(uint _a) public pure returns(uint){
+        require(_a > 0 , "num must be greater");
+        return _a %3;
     }
 
     function average(int a, int b, int c)public pure returns(int){
@@ -35,5 +35,4 @@ contract Exercise_2{
         int result = sum / 3;
         return result;
     }
-
 }
