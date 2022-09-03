@@ -9,18 +9,20 @@ contract Exercise_4{
         return x ** y;
     }
 
-    function check(uint num) public pure returns(uint) {
-        uint rem = 0; uint sum = 0;
-        uint n = num;
-
+    function palindrome(uint num) public pure returns (string memory){
+        uint rem = 0;
+        uint rev;
+        uint original = num;  
         while(num > 0){
             rem = num % 10;
+            rev = rev * 10 + rem;
             num /= 10;
-            sum = sum * 10 + rem;  
         }
-        if(sum == n)
-            return 1;
-        else
-            return 0;
+        if(original == rev){
+            return "palindrome";
+        }
+        else{
+            return "not palindrome";
+        }
     }
 }
